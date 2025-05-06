@@ -172,20 +172,18 @@ Example Response:
 - Categories: ELECTRONICS, FASHION, BOOKS
 - Brands: Apple, Samsung, Nike, etc.
 
+| Feature                            | Status ✅ |
+| ---------------------------------- | -------- |
+| Product search (partial match)     | ✅        |
+| Product details page               | ✅        |
+| Minimum 20 products loaded         | ✅        |
+| API error handling (toasts)        | ✅        |
+| Responsive frontend                | ✅        |
+| Swagger documentation              | ✅        |
+| Clean modular code                 | ✅        |
+| Docker support (optional)          | ❌        |
+| Build locally (backend + frontend) | ✅        |
 
-✅ Acceptance Criteria Checklist
-Feature
-Status 
-Product search (partial match)
-Product details page
-Minimum 15+ products loaded
-API error handling (toasts)
-Responsive frontend
-Swagger documentation
-Clean modular code
-Docker support (optional)
-❌
-Build locally (backend + frontend)
 
 📌 Tech Stack
 
