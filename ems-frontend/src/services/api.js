@@ -9,22 +9,21 @@ export const api = axios.create({
   },
 });
 
-// Enhanced getProducts function
 export const getProducts = async (searchTerm = '') => {
   try {
     const isUUID = /^[\da-f]{8}-([\da-f]{4}-){3}[\da-f]{12}$/i.test(searchTerm);
 
     if (isUUID) {
       const response = await api.get(`/products/${searchTerm}`);
-      return response.data.data; // Extract the product from the ApiResponse
+      return response.data.data; 
     }
 
     const response = await api.get(`/products${searchTerm ? `?search=${encodeURIComponent(searchTerm)}` : ''}`);
     
     if (response.data.status === 'SUCCESS') {
-      return response.data.data; // Extract the products from ApiResponse
+      return response.data.data; 
     } else {
-      console.error(response.data.message); // Handle failure
+      console.error(response.data.message); 
       return [];
     }
   } catch (error) {
@@ -38,9 +37,9 @@ export const getProductById = async (id) => {
   try {
     const response = await api.get(`/products/${id}`);
     if (response.data.status === 'SUCCESS') {
-      return response.data.data; // Return the product from ApiResponse
+      return response.data.data; 
     } else {
-      console.error(response.data.message); // Handle failure
+      console.error(response.data.message); 
       return null;
     }
   } catch (error) {
