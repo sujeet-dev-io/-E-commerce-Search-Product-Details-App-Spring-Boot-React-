@@ -64,7 +64,6 @@ const ProductDetailPage = () => {
     );
   }
 
-  // ✅ Destructuring the required fields only (excluding id)
   const { name, description, price, brand, category, imageUrl } = product;
 
   return (
@@ -95,7 +94,7 @@ const ProductDetailPage = () => {
             />
           </Grid>
           <Grid item xs={12} md={6}>
-            {/* ✅ Showing category */}
+            {/* Showing category */}
             <Chip 
               label={category} 
               color="primary" 
